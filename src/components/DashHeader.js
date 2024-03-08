@@ -26,12 +26,12 @@ const DashHeader = () => {
     }] = useSendLogoutMutation()
 
     
-    // useEffect(() => {
-    //     if (isSuccess)  {
-    //         console.log('success')   
-    //         navigate('/')
-    //     }
-    // }, [isSuccess, navigate])
+    useEffect(() => {
+        if (isSuccess)  {
+            console.log('success')   
+            navigate('/')
+        }
+    }, [isSuccess, navigate])
 
     const onNewNoteClicked = () => navigate('/dash/notes/new')
     const onNewUserClicked = () => navigate('/dash/users/new')
@@ -42,7 +42,7 @@ const DashHeader = () => {
 
     const handleLogout = () => {
         sendLogout()
-        navigate('/')
+        // navigate('/')
     }
 
     let dashClass = null
